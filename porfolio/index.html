@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>porfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b1cc361ade.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png.jpg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></a></li>
+                    <li><a href="#about">About</a></a></li>
+                    <li><a href="#services">Services</a></a></li>
+                    <li><a href="#contact">contact</a></a></li>
+                    <i class="fa-solid fa-xmark"onclick="closemenu()"></i>
+                
+                </ul>
+                <i class="fa-solid fa-bars"onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Web Designer</p>
+                <h1>Hi, I'm <span>Sana Shaik</span><br> From Nandyal</h1>
+            </div>
+        </div>
+    </div>
+    <!---------------------about---------------->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/about.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello there! My name is Sana Shaik, and I'm delighted to welcome you to my corner of the web. Originally hailing from the vibrant town of Nandyal, I am a passionate web developer dedicated to crafting immersive digital experience
+                        My journey into the world of technology began with a spark of curiosity during my time at Narayana Engineering College, where I completed my graduation. It was there that I nurtured my love for coding and discovered the endless possibilities that the digital realm offers.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>UI?UX</span><br>Designing web</li>
+                                <li><span> Web development</span><br>web app development</li>
+                                <li><span>python </span><br>python programming</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="experience">
+
+                            <ul>
+                                <li><span>courses</span><br>lets upgrade</li>
+                                <li><span>python course</span><br>codewithsagar</li>
+                            </ul>
+                         </div>
+                         <div class="tab-contents" id="education">
+                              <ul>
+                                  <li><span>2022-2026</span><br>narayana engineering college</li>
+                                  <li><span> 2020-2022</span><br>narayana junior college</li>
+                                  <li><span>2020</span><br>Rotary school</li>
+                                </ul>
+                        </div>
+            </div>
+         </div>
+    </div>
+    <!------------------------services--------------------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">my Services</h1>
+            <div id="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p> Designing and building custom websites for individuals, businesses, or organizations.</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+
+                    <i class="fa-solid fa-language"></i>
+                    <h2>Language Proficiency</h2>
+                    <p>My fluency in Hindi,English,telugu enables me to navigate global markets and connect with clients worldwide, facilitating smooth communication and successful project outcomes." </p>
+                    <a href="#">learn more</a>
+                 </div>
+            </div>
+         </div>
+    </div>
+    <!----------------portfolio------------->
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub=title">Contact Me</h1class></h1>
+                    <p><i class="fa-solid fa-envelope"></i>shaiksana13062004@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>6281498526</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/shaiksana5626?igsh=N2MwZTVjdzR2MDRp"><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="your name" required>
+                            <input type="email" name="Email" placeholder="your email" required>
+                            <textarea name="Message" rows="6" placeholder="your message"></textarea>
+                            <button type="submit" class="btn btn2">submit</button>
+                        </form>
+                        <spanid="msg"></spanid></span>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>
+                    Copyright @kevin. made with<i class="fa-solid fa-heart"></i>easy tutorials
+                </p>
+            </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+        function closemenu(){
+            sidemenu.style.right="-200";
+        }
+    </script>
+    <form name="submit-to-google-sheet">
+       
+      </form>
+      
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyrytFBEqXEhtB2iKu0H-AZgBupcfyQgew3F3MnB_qpSdEjxd-BsztwVlDLq1Nr3PC7rA/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML= "Message sent Successfully"
+                setTimeout(function(){
+                    msg.innerHTML = " "
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+    
+</body>
+</html>
